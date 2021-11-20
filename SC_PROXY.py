@@ -53,8 +53,8 @@ if x==5:
     print("\033[36m  -------------> \033[92mYOUR PROXY SAVE AS socks[NOUREDINE_KN].txt")
 else:
     proxy = ['http', 'https', 'socks4', 'socks5']
-    url = f'https://www.proxy-list.download/api/v1/get?type={proxy[x + 1]}'
+    url = f'https://www.proxy-list.download/api/v1/get?type={proxy[x-1]}'
     r = requests.get(url).text
     with  open(f'{proxy[x+1]}[NOUREDINE_KN].txt', 'w') as rusalt:
         rusalt.write(r)
-    print(f"\033[36m  -----------> \033[92mYOUR PROXY SAVE AS {proxy[x+1]}[NOUREDINE_KN].txt")
+    print(f"\033[36m  -----------> \033[92mYOUR PROXY SAVE AS {proxy[x-1]}[NOUREDINE_KN].txt")
